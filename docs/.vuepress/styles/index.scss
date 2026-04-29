@@ -1,0 +1,88 @@
+:root {
+  --c-brand: #10b981;
+  --c-brand-light: #34d399;
+}
+
+/* Home Page Hero Button */
+.vp-hero-action-button.primary {
+  background-color: #10b981 !important;
+  border-color: #10b981 !important;
+}
+
+/* Sidebar Styling */
+.vp-sidebar {
+  width: 20rem !important;
+  border-right: 1px solid #e2e8f0 !important;
+}
+
+/* Right-side TOC Simulation */
+@media (min-width: 1200px) {
+  /* Hide sub-items in the left sidebar flow */
+  .vp-sidebar .vp-sidebar-sub-items {
+    display: none;
+  }
+
+  /* Extract the active page's TOC and float it to the right */
+  .vp-sidebar .vp-sidebar-item.active + .vp-sidebar-sub-items {
+    display: block !important;
+    position: fixed !important;
+    top: 6rem !important;
+    right: 3rem !important;
+    width: 18rem !important;
+    background: #ffffff !important;
+    border-left: 3px solid var(--c-brand) !important;
+    padding: 1.5rem !important;
+    margin: 0 !important;
+    list-style: none !important;
+    font-size: 0.95rem !important;
+    max-height: calc(100vh - 10rem) !important;
+    overflow-y: auto !important;
+    z-index: 1000 !important;
+    box-shadow: -5px 5px 20px rgba(0,0,0,0.05) !important;
+    border-radius: 4px !important;
+  }
+
+  /* Indent sub-links in the right-side TOC */
+  .vp-sidebar-sub-items .vp-sidebar-sub-items {
+    padding-left: 1rem !important;
+    display: block !important;
+    position: static !important;
+    box-shadow: none !important;
+    border: none !important;
+    background: transparent !important;
+    width: auto !important;
+  }
+
+  /* Page layout adjustment to make room for TOC */
+  .vp-page {
+    padding-right: 22rem !important;
+  }
+}
+
+/* Mobile adjustments */
+@media (max-width: 1199px) {
+  .vp-sidebar-sub-items {
+    display: block !important;
+  }
+  .vp-page {
+    padding-right: 0 !important;
+  }
+}
+
+/* Global Footer Styles */
+.custom-footer {
+  text-align: center;
+  padding: 2.5rem;
+  border-top: 1px solid var(--c-border);
+  color: var(--c-text-lighter);
+  margin-top: 3rem;
+  clear: both;
+}
+.custom-footer a {
+  color: var(--c-brand);
+  font-weight: 500;
+  text-decoration: none;
+}
+.custom-footer a:hover {
+  text-decoration: underline;
+}
