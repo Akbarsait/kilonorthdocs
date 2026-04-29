@@ -1,0 +1,22 @@
+{
+  "name": "kilonorthdocs",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs",
+    "test:e2e": "playwright test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.59.1",
+    "@vuepress/bundler-vite": "^2.0.0-rc.28",
+    "@vuepress/theme-default": "^2.0.0-rc.128",
+    "sass-embedded": "^1.99.0",
+    "vuepress": "^2.0.0-rc.28"
+  }
+}
